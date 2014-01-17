@@ -10,7 +10,7 @@ app.configure(function() {
 });
 
 
-var _port = 5000;
+var port = 5000;
 
 // application -------------------------------------------------------------
 app.get('*', function(req, res) {
@@ -19,4 +19,4 @@ app.get('*', function(req, res) {
 
 // listen (start app with node server.js) ======================================
 app.listen(process.env.PORT || 5000);
-console.log("App listening on port " + _port);
+console.log("App listening on port " + port);
