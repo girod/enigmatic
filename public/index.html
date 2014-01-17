@@ -1,0 +1,205 @@
+<html>
+<head>
+    <title>Bootstrap arena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+    <!-- Font-Awesome -->
+    <link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- My style -->
+    <link href="css/style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>                
+                <a class="navbar-brand" href="#">La bonne occase</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Top Produits</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> About Us<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Details</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a style="padding-bottom:5px" href="#" onclick=" window.open(
+                                  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+                                  'facebook-share-dialog',
+                                  'width=626,height=436');
+                                return false;">
+                                <span class="fa-stack fa-lg">
+                                  <i style="-webkit-transform: rotate(2132deg);" class="fa fa-facebook-square"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="padding-bottom:5px" href="https://twitter.com/intent/tweet?text=Node+and+Angular+To-Do+App%3A+Application+Organization+and+Structure&url=http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-application-organization-and-structure&via=scotch_io&related=scotch_io">
+                                <span class="fa-stack fa-lg">
+                                  <i style="-webkit-transform: rotate(2132deg);" class="fa fa-twitter"></i>
+                                </span>
+                                </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="fa fa-question"></span> Aide</a></li>
+                    </ul>                   
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/users/sign_up"><span class="fa fa-user"></span> Nouveau</a></li> 
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Login<strong class="caret"></strong></a>
+                            <div class="dropdown-menu login-menu well" style="padding-left: 30px; padding-bottom: 0px;">
+                                <form class="bs-example form-horizontal" action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+                                    <fieldset style="width:300px">
+                                      <div class="form-group">
+                                        <div class="col-lg-10">
+                                          <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <div class="col-lg-10">
+                                          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <div class="col-lg-10 col-lg-offset-2">
+                                          <button type="submit" class="btn btn-primary">Submit</button> 
+                                        </div>
+                                      </div>
+                                      </fieldset>
+                                </form>
+                            </div>
+                        </li>                        
+                    </ul>                                                                                   
+            </div>      
+        </div>  
+
+    </nav>  
+    <div class="jumbotron">
+        <div class="container">        
+            <h1>La bonne occase</h1>
+            <p class="lead">Trouvez la bonne occase !! Déja 23 272 779 annonces présentes.</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <p><a class="btn btn-primary btn-lg btn-success" href="#" role="button">Déposer</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p><a class="btn btn-lg btn-success btn-success" href="#" role="button">Offres</a></p>            
+                </div>   
+                <div class="col-md-4">
+                    <p><a class="btn btn-lg btn-success btn-success" href="#" role="button">Demandes</a></p>                        
+                </div>                
+            </div>
+        </div>        
+    </div>        
+    <div class="container">
+            <div class="row">     
+                <div class="col-md-5" align="center">
+                    <form role="search">
+                        <div class="input-group">
+                          <input type="text" class="form-control">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+
+                        </div>
+                    </form>
+                    <div>
+                        <span id="aquitaine">Aquitaine</span>
+                        <span id="midipyrennees">Midi-Pyrénées</span>
+                        <span id="languedocroussillon">Languedoc Roussillon</span>
+                        <span id="paca">Provence Alpes Côte d'Azur</span>
+                        <span id="poitoucharente">Poitou Charentes</span>
+                        <span id="limousin">Limousin</span>
+                        <span id="auvergne">Auvergne</span>
+                        <span id="bretagne">Bretagne</span>
+                        <span id="paysdelaloire">Pays de la Loire</span>
+                        <span id="bassenormandie">Basse Normandie</span>
+                        <span id="centre">Centre</span>
+                        <span id="bourgogne">Bougogne</span>
+                        <span id="franchecompte">Franche Comté</span>
+                        <span id="alsace">Alsace</span>
+                        <span id="lorraine">Lorraine</span>
+                        <span id="champagneardenne">Champagne Ardenne</span>
+                        <span id="idf">Ile de France</span>
+                        <span id="picardie">Picardie</span>
+                        <span id="hautenormandie">Haute Normandie</span>
+                        <span id="pasdecalais">Pas de Calais</span>
+                        <span id="rhonealpes">Rhône Alpes</span>                 
+                    </div>      
+                </div>
+                <div id="canvas_france"></div>                
+            </div>        
+    </div>
+</body>
+<footer>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/raphael.js" charset="utf-8" ></script>
+    <script src="js/map_fr.js" charset="utf-8" ></script>    
+    <script type="text/javascript">
+      window.onload = function () {
+        var R = Raphael("canvas_france", 500, 500),
+          attr = {
+          "fill": "#d3d3d3",
+          "stroke": "#fff",
+          "stroke-opacity": "1",
+          "stroke-linejoin": "round",   
+          "stroke-miterlimit": "4",
+          "stroke-width": "0.75",
+          "stroke-dasharray": "none"
+        },
+        usRaphael = {};
+        
+        //Draw Map and store Raphael paths
+        for (var state in usMap) {
+          usRaphael[state] = R.path(usMap[state]).attr(attr);
+        }
+        
+        //Do Work on Map
+        for (var state in usRaphael) {
+          usRaphael[state].color = Raphael.getColor();
+          
+          (function (st, state) {
+
+            st[0].style.cursor = "pointer";
+
+            st[0].onmouseover = function () {
+              st.animate({fill: st.color}, 500);
+              st.toFront();
+              R.safari();
+              var myelt = eval("$('#"+state+"')");
+              myelt.css( "color", "red" );
+            };
+
+            st[0].onmouseout = function () {
+              st.animate({fill: "#d3d3d3"}, 500);
+              st.toFront();
+              R.safari();
+              var myelt = eval("$('#"+state+"')");
+              myelt.css( "color", "" );              
+            };
+                       
+          })(usRaphael[state], state);
+        }
+                
+      };  
+    </script>
+</footer>
+</html>
