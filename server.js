@@ -10,7 +10,7 @@ app.configure(function() {
 });
 
 
-var port = 8080;
+var port = 5000;
 
 // application -------------------------------------------------------------
 app.get('*', function(req, res) {
