@@ -1,9 +1,18 @@
 'use strict';
 
-var mongoose = require('mongoose'),
-    LocalStrategy = require('passport-local').Strategy,
-    User = mongoose.model('User', {text : String, done : Boolean});
+var mongoose = require('mongoose');
+var LocalStrategy = require('passport-local').Strategy;
 
+var UserSchema = mongoose.Schema({ 
+    username: String,
+    password: String
+});
+
+UserSchema.methods.validPassword = function( pwd ) {
+    // EXAMPLE CODE!
+    return ( this.password === pwd );
+};
+var User = mongoose.model('User', UserSchema);
 
 module.exports = function(passport) {
 
