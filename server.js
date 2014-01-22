@@ -11,7 +11,9 @@ var app      = express();       // create our app w/ express
 var port = 8080;
 
 // configuration ===============================================================
-mongoose.connect('mongodb://localhost/enigmatic');         // connect to mongoDB database on modulus.io
+
+var mongoUri = process.env.MONGOLAB_URI ||  'mongodb://localhost/enigmatic';
+mongoose.connect(mongoUri);         // connect to mongoDB database on modulus.io
 
 app.configure(function() {
         app.use(express.static(__dirname + '/public'));    // set the static files location /public/img will be /img for users
