@@ -1,4 +1,4 @@
-// set up ======================================================================
+// set up ====================================================================
 var express  = require('express');
 var flash = require('connect-flash');
 var mongoose = require('mongoose');	// mongoose for mongodb
