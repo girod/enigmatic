@@ -2,19 +2,21 @@
 
 var mongoose = require('mongoose');
 var LocalStrategy = require('passport-local').Strategy;
-
-var UserSchema = mongoose.Schema({ 
-    username: String,
-    password: String
-});
-
-UserSchema.methods.validPassword = function( pwd ) {
-    // EXAMPLE CODE!
-    return ( this.password === pwd );
-};
-var User = mongoose.model('User', UserSchema);
+var User = mongoose.model('users');
 
 module.exports = function(passport) {
+    //Serialize sessions
+    passport.serializeUser(function(user, done) {
+        done(null, user.id);
+    });
+
+    passport.deserializeUser(function(id, done) {
+        User.findOne({
+            _id: id
+        }, '-salt -hashed_password', function(err, user) {
+            done(err, user);
+        });
+    });
 
     //Use local strategy
     passport.use(new LocalStrategy(
