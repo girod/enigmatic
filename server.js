@@ -31,6 +31,7 @@ app.configure(function() {
         app.use(passport.session());        
 });
 
+
 //Bootstrap routes
 require('./config/routes')(app, passport);
 
