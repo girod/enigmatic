@@ -24,15 +24,9 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-star"></span> Top Produits</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> About Us<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Details</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Contact</a></li>                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -53,18 +47,13 @@
                                 </span>
                             </a>
                         </li>
-                    </ul>
+                    </ul>                 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="fa fa-question"></span> Aide</a></li>
-                    </ul>                   
-
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="fa fa-user"></span> Nouveau</a></li> 
+                        <li><a href="#"><span class="fa fa-user"></span>Sign up</a></li> 
                         <li class="divider-vertical"></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Login<strong class="caret"></strong></a>
-                            <div class="dropdown-menu login-menu well" style="padding-left: 30px; padding-bottom: 0px;">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in</a>
+<!--                             <div class="dropdown-menu login-menu well" style="padding-left: 30px; padding-bottom: 0px;">
                                 <form class="bs-example form-horizontal" action="/users/session" method="post" accept-charset="UTF-8">
                                     <fieldset style="width:300px">
                                       <div class="form-group">
@@ -84,7 +73,7 @@
                                       </div>
                                       </fieldset>
                                 </form>
-                            </div>
+                            </div> -->
                         </li>                        
                     </ul>                                                                                   
             </div>      
@@ -93,22 +82,22 @@
     </nav>  
     <div class="jumbotron" style="padding-top:10px;padding-bottom:10px">
         <div class="container">        
-            <h2>Enigmatic-ravine-2642</h2>           
+            <h3></h3>           
         </div>        
     </div>    
     <div class="container">
             <div class="row" style="margin-top:-80px; margin-bottom:20px">
                 <div class="col-md-2" style=" display: inline-block;">
-                    <a class="btn btn-info" href="#" role="button">Offres</a>
+                    <a class="btn btn-info btn-sm" href="#" role="button">Offres</a>
                 </div>   
                 <div class="col-md-2"  style=" display: inline-block;">
-                    <a class="btn btn-warning" href="#" role="button">Demandes</a>
+                    <a class="btn btn-warning btn-sm" href="#" role="button">Demandes</a>
                 </div>                
                 <div class="col-md-2"  style=" display: inline-block;">
-                    <a class="btn btn-success" href="#" role="button">Déposer</a>
+                    <a class="btn btn-success btn-sm" href="#" role="button">Déposer</a>
                 </div>                
             </div>      
-            <div class="row" style="margin-top:10px">     
+            <div class="row" style="margin-top:10px; text-align:center;">     
                 <div class="col-md-5" align="center">
                     <form role="search">
                         <div class="input-group">
@@ -143,7 +132,7 @@
                         <span id="rhonealpes">Rhône Alpes</span>                 
                     </div>      
                 </div>
-                <div id="canvas_france"></div>                
+                <div class="col-md-7" id="canvas_france"></div>                
             </div>        
     </div>
 </body>
@@ -197,7 +186,20 @@
                        
           })(usRaphael[state], state);
         }
-        R.setViewBox(0, 0, 600, 600, true);
+
+        window.onresize = function(){ 
+          if (window.matchMedia("(min-width: 600px)").matches) {
+            R.setViewBox(0, 0, 500, 500, true);
+          } else {
+            R.setViewBox(0, 0, 700, 700, true);
+          }
+        }
+
+        if (window.matchMedia("(min-width: 600px)").matches) {
+          R.setViewBox(0, 0, 500, 500, true);
+        } else {
+          R.setViewBox(0, 0, 700, 700, true);
+        }
       };  
     </script>
 </footer>

@@ -12,6 +12,11 @@
 	background-size: cover;
 }
 
-.col-md-1{
-	display: inline-block;
+@media (max-width: 768px) {
+	.btn-sm {
+		font-size: 12px;
+		line-height: 1.5;
+		border-radius: 3px;	
+		padding: 5px 3px;
+	}
 }
