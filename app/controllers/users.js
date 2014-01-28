@@ -17,6 +17,16 @@ exports.signin = function(req, res) {
 };
 
 /**
+ * Show contact form
+ */
+exports.contact = function(req, res) {
+    res.sendfile('public/contact.html', {
+        title: 'Contact',
+        message: req.flash('error')
+    });
+};
+
+/**
  * Session
  */
 exports.session = function(req, res) {

@@ -1,15 +1,41 @@
+body{
+	background-color: #F8F8F8;
+}
+
 .login-menu {
 	width: 300px;
 }
 
 
-.jumbotron {
+.jumbotron-accueil {
 	height: 468px;
 	background: url(../images/guitar_lion.jpg) no-repeat center; 
 	  -webkit-background-size: cover; /* pour Chrome et Safari */
 	  -moz-background-size: cover; /* pour Firefox */
 	  -o-background-size: cover; /* pour Opera */
 	background-size: cover;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 35px;
+	margin: 50px auto 0 auto;
+}
+
+.form-contact {
+	max-width: 600px;
+	padding: 35px;
+	margin: 20px auto 0 auto;
+}
+
+.form-signin-heading {
+	margin-bottom: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	color: #6E95E6;
+	line-height: 1.1;
+	font-size: 20px;
+	text-transform: capitalize;
 }
 
 @media (max-width: 768px) {
