@@ -1,0 +1,120 @@
+<div class="jumbotron jumbotron-accueil" style="padding-top:10px;padding-bottom:10px">
+    <div class="container">        
+        <h3></h3>           
+    </div>        
+</div>    
+<div class="container">
+        <div class="row" style="margin-top:-80px; margin-bottom:20px">
+            <div class="col-md-2" style=" display: inline-block;">
+                <a class="btn btn-info btn-sm" href="#" role="button">Offres</a>
+            </div>   
+            <div class="col-md-2"  style=" display: inline-block;">
+                <a class="btn btn-warning btn-sm" href="#" role="button">Demandes</a>
+            </div>                
+            <div class="col-md-2"  style=" display: inline-block;">
+                <a class="btn btn-success btn-sm" href="#" role="button">Déposer</a>
+            </div>                
+        </div>      
+        <div class="row" style="margin-top:10px; text-align:center;">     
+            <div class="col-md-5" align="center">
+                <form role="search">
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                      </span>
+
+                    </div>
+                </form>
+                <div>
+                    <span id="aquitaine">Aquitaine</span>
+                    <span id="midipyrennees">Midi-Pyrénées</span>
+                    <span id="languedocroussillon">Languedoc Roussillon</span>
+                    <span id="paca">Provence Alpes Côte d'Azur</span>
+                    <span id="poitoucharente">Poitou Charentes</span>
+                    <span id="limousin">Limousin</span>
+                    <span id="auvergne">Auvergne</span>
+                    <span id="bretagne">Bretagne</span>
+                    <span id="paysdelaloire">Pays de la Loire</span>
+                    <span id="bassenormandie">Basse Normandie</span>
+                    <span id="centre">Centre</span>
+                    <span id="bourgogne">Bougogne</span>
+                    <span id="franchecompte">Franche Comté</span>
+                    <span id="alsace">Alsace</span>
+                    <span id="lorraine">Lorraine</span>
+                    <span id="champagneardenne">Champagne Ardenne</span>
+                    <span id="idf">Ile de France</span>
+                    <span id="picardie">Picardie</span>
+                    <span id="hautenormandie">Haute Normandie</span>
+                    <span id="pasdecalais">Pas de Calais</span>
+                    <span id="rhonealpes">Rhône Alpes</span>                 
+                </div>      
+            </div>
+            <div class="col-md-7" id="canvas_france"></div>                
+        </div>        
+</div>
+<footer>
+    <script src="../js/raphael.js" charset="utf-8" ></script>
+    <script src="../js/map_fr.js" charset="utf-8" ></script>    
+    <script type="text/javascript">
+
+        var R = Raphael("canvas_france", 500, 500),
+          attr = {
+          "fill": "#d3d3d3",
+          "stroke": "#fff",
+          "stroke-opacity": "1",
+          "stroke-linejoin": "round",   
+          "stroke-miterlimit": "4",
+          "stroke-width": "0.75",
+          "stroke-dasharray": "none"
+        },
+        usRaphael = {};
+        
+        //Draw Map and store Raphael paths
+        for (var state in usMap) {
+          usRaphael[state] = R.path(usMap[state]).attr(attr);
+        }
+        
+        //Do Work on Map
+        for (var state in usRaphael) {
+          usRaphael[state].color = Raphael.getColor();
+          
+          (function (st, state) {
+
+            st[0].style.cursor = "pointer";
+
+            st[0].onmouseover = function () {
+              st.animate({fill: st.color}, 500);
+              st.toFront();
+              R.safari();
+              var myelt = eval("$('#"+state+"')");
+              myelt.css( "color", "red" );
+            };
+
+            st[0].onmouseout = function () {
+              st.animate({fill: "#d3d3d3"}, 500);
+              st.toFront();
+              R.safari();
+              var myelt = eval("$('#"+state+"')");
+              myelt.css( "color", "" );              
+            };
+                       
+          })(usRaphael[state], state);
+        }
+
+        window.onresize = function(){ 
+          if (window.matchMedia("(min-width: 600px)").matches) {
+            R.setViewBox(0, 0, 500, 500, true);
+          } else {
+            R.setViewBox(0, 0, 830, 830, true);
+          }
+        }
+
+        if (window.matchMedia("(min-width: 600px)").matches) {
+          R.setViewBox(0, 0, 500, 500, true);
+        } else {
+          R.setViewBox(0, 0, 830, 830, true);
+        }
+
+    </script>
+</footer>

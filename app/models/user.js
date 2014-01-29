@@ -14,7 +14,6 @@ var UserSchema = mongoose.Schema({
 UserSchema.methods = {
 	validPassword : function( pwd ) {
     	// EXAMPLE CODE!
-    	console.log(this.password + '   ' + pwd);
     	return ( this.password === pwd );
 	}
 }

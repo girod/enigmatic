@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
  * Show login form
  */
 exports.signin = function(req, res) {
-    res.sendfile('public/signin.html', {
+    res.sendfile('public/index.html', {
         title: 'Signin',
         message: req.flash('error')
     });
@@ -20,15 +20,8 @@ exports.signin = function(req, res) {
  * Show contact form
  */
 exports.contact = function(req, res) {
-    res.sendfile('public/contact.html', {
+    res.sendfile('public/index.html', {
         title: 'Contact',
         message: req.flash('error')
     });
-};
-
-/**
- * Session
- */
-exports.session = function(req, res) {
-	res.redirect('/');
 };
