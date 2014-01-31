@@ -10,10 +10,13 @@ var mongoose = require('mongoose'),
  * Show login form
  */
 exports.signin = function(req, res) {
-    res.sendfile('public/index.html', {
+/*    res.sendfile('public/index.html', {
         title: 'Signin',
-        message: req.flash('error')
-    });
+        message: req.flash('error'),
+        user: 'tobi' 
+    });*/
+	console.log('coucou');
+	res.send({user: 'tobi'});
 };
 
 /**

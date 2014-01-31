@@ -7,7 +7,7 @@ module.exports = function(app, passport){
     app.get('/contact', users.contact);
 
     //Setting the local strategy route
-    app.post('/users/session', passport.authenticate('local', {
+    app.post('/signin', passport.authenticate('local', {
         successRedirect: '/signin',
         failureRedirect: '/signin',
         failureFlash: true
