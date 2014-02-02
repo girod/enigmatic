@@ -33,35 +33,35 @@
                 <a class="navbar-brand" href="#">Enigmatic-ravine-2642</a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Top Produits</a></li>
-                        <li><a href="/contact">Contact</a></li>                        
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a style="padding-bottom:5px" href="#" onclick=" window.open(
-                                  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-                                  'facebook-share-dialog',
-                                  'width=626,height=436');
-                                return false;">
-                                <span class="fa-stack fa-lg">
-                                  <i style="-webkit-transform: rotate(-45deg);" class="fa fa-facebook-square"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a style="padding-bottom:5px" href="https://twitter.com/intent/tweet?text=ENIGMATIC-RAVINE-2642&url=http://enigmatic-ravine-2642.herokuapp.com&via=Heroku-ENIGMATIC-RAVINE-2642&related=Heroku-ENIGMATIC-RAVINE-2642">
-                                <span class="fa-stack fa-lg">
-                                  <i style="-webkit-transform: rotate(-45deg);" class="fa fa-twitter"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>                 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="fa fa-user"></span>Sign up</a></li> 
-                        <li><a href="/signin"><span class="fa fa-user"></span>Sign in</a></li>                      
-                    </ul>                                                                                   
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span> Top Produits</a></li>
+                    <li><a href="/contact">Contact</a></li>                        
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a style="padding-bottom:5px" href="#" onclick=" window.open(
+                              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+                              'facebook-share-dialog',
+                              'width=626,height=436');
+                            return false;">
+                            <span class="fa-stack fa-lg">
+                              <i style="-webkit-transform: rotate(-45deg);" class="fa fa-facebook-square"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a style="padding-bottom:5px" href="https://twitter.com/intent/tweet?text=ENIGMATIC-RAVINE-2642&url=http://enigmatic-ravine-2642.herokuapp.com&via=Heroku-ENIGMATIC-RAVINE-2642&related=Heroku-ENIGMATIC-RAVINE-2642">
+                            <span class="fa-stack fa-lg">
+                              <i style="-webkit-transform: rotate(-45deg);" class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>                 
+                <ul class="nav navbar-nav navbar-right" ng-hide="{{User.connected}}">
+                    <li><a href="#"><span class="fa fa-user"></span>Sign up</a></li> 
+                    <li><a href="/signin"><span class="fa fa-user"></span>Sign in</a></li>
+                </ul>
             </div>      
         </div>  
     </nav>  

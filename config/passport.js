@@ -7,10 +7,12 @@ var User = mongoose.model('users');
 module.exports = function(passport) {
     //Serialize sessions
     passport.serializeUser(function(user, done) {
+        console.log("serializeUser");
         done(null, user.id);
     });
 
     passport.deserializeUser(function(id, done) {
+      console.log("deserializeUser");
         User.findOne({
             _id: id
         }, '-salt -hashed_password', function(err, user) {

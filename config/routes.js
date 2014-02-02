@@ -4,11 +4,12 @@ module.exports = function(app, passport){
     //User Routes
     var users = require('../app/controllers/users');
     app.get('/signin', users.signin);
+    app.get('/session', users.session);
     app.get('/contact', users.contact);
 
     //Setting the local strategy route
     app.post('/signin', passport.authenticate('local', {
-        successRedirect: '/signin',
+        successRedirect: '/session',
         failureRedirect: '/signin',
         failureFlash: true
     }));

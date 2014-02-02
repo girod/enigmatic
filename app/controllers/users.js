@@ -10,13 +10,11 @@ var mongoose = require('mongoose'),
  * Show login form
  */
 exports.signin = function(req, res) {
-/*    res.sendfile('public/index.html', {
-        title: 'Signin',
-        message: req.flash('error'),
-        user: 'tobi' 
-    });*/
-	console.log('coucou');
-	res.send({user: 'tobi'});
+	res.send({message:'Merci de saisir vos identifiants'});
+};
+
+exports.session = function(req, res) {
+    res.send({ id: req.user.id, message:'Bienvenu, vous êtes connecté' });
 };
 
 /**
