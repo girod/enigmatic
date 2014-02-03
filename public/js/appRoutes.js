@@ -12,6 +12,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'SignController'
 		})
 
+		.when('/logout', {		
+			templateUrl: 'views/home.html',
+			controller: 'LogoutController'
+		})
+
 		.when('/contact', {
 			templateUrl: 'views/contact.html',
 			controller: 'ContactController'

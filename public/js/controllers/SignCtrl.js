@@ -1,17 +1,24 @@
-angular.module('SignCtrl', []).controller('SignController', function($scope, $http, $location) {
+angular.module('SignCtrl', ['MainCtrl']).controller('SignController', function($scope, $http, $location) {
 
-	$scope.tagline = 'To the moon and back!';	
-	$scope.User = {};
-    $scope.User.connected = false;
+	$scope.tagline = '';	
+
     $scope.register = function() {
         $http.post('/signin', $scope.User).
             success(function(data) {
-            	//console.log(data);
-                $scope.User.connected = true;
-                console.log($scope.User);
+                console.log(data.connected);
+                if (data.connected){
+                    $scope.User.connected = true;
+                    $scope.User.firstname = data.user.firstname;
+                    $location.path("/");
+                }    
+                else{
+                    console.log(data.message);
+                    $scope.tagline = data.message;
+                }
             }).error(function(err) {
-            	console.log('ici');
                 $scope.errorMessage = err;
             });
     }
+
+
 });

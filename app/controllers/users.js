@@ -10,11 +10,16 @@ var mongoose = require('mongoose'),
  * Show login form
  */
 exports.signin = function(req, res) {
-	res.send({message:'Merci de saisir vos identifiants'});
+	res.send({connected: false, message:"Vous n'avez pas été reconnu, merci de saisir vos identifiants à nouveau"});
 };
 
 exports.session = function(req, res) {
-    res.send({ id: req.user.id, message:'Bienvenu, vous êtes connecté' });
+    res.send({ connected: true, user: req.user, message:"Bienvenu, vous êtes connecté" });
+};
+
+exports.logout = function(req, res) {
+	//req.logout();
+	res.send({ connected: false, message:"Bienvenu, vous êtes déconnecté" });
 };
 
 /**
