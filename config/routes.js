@@ -8,7 +8,9 @@ module.exports = function(app, passport){
     app.get('/login', users.signin);
 
     //Setting the local strategy route
+    app.post('/isconnected', users.is_connected);
     app.post('/logout', users.logout);
+    app.post('/signup', users.create);
     app.post('/signin', passport.authenticate('local', {
         successRedirect: '/session',
         failureRedirect: '/login',

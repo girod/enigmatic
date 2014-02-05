@@ -1,0 +1,61 @@
+<div class="container" style="margin-top:60px">
+    <div class="row">
+      <div class="col-lg-2" style="margin-top:50px">
+          <img src="images/micro.png">
+      </div>
+      <div class="col-lg-10">
+          <form class="bs-example form-horizontal form-sign" method="post" accept-charset="UTF-8">
+              <h2 class="form-addannonce-heading">Merci de déposer votre annonce</h2> 
+              <fieldset style="width:300px">
+                <div class="row input-group" style="margin:10px"> 
+                      <span class="input-group-addon" style="width:150px;">Prénom</span>
+                      <input type="text" class="form-control" name="firstname">
+                </div><!-- /.row -->
+                <div class="row input-group" style="margin:10px">
+                      <span class="input-group-addon" style="width:150px;">Nom</span>
+                      <input type="text" class="form-control" name="lastname">
+                </div><!-- /.row -->
+                <div class="row input-group" style="margin:10px">
+                      <span class="input-group-addon" style="width:150px;">Email</span>
+                      <input type="text" class="form-control" name="username">
+                </div><!-- /.row -->  
+                <div class="row input-group" style="margin:10px">
+                      <span class="input-group-addon" style="width:150px;">Téléphone</span>
+                      <input type="text" class="form-control" name="phone">
+                </div><!-- /.row -->         
+                <br><br>        
+                <div class="row input-group" style="margin:10px"> 
+                      <span class="input-group-addon" style="width:150px;">Région</span>
+                      <select class="form-control" name="region">
+                        <option name="aquitaine">Aquitaine</option>
+                        <option name="midipyrennees">Midi-Pyrénées</option>
+                        <option name="languedocroussillon">Languedoc Roussillon</option>
+                        <option name="paca">Provence Alpes Côte d'Azur</option>
+                        <option name="poitoucharente">Poitou Charentes</option><option name="aquitaine">Limousin</option>
+                        <option name="limousin">Auvergne</option>
+                        <option name="bretagne">Bretagne</option>
+                        <option name="paysdelaloire">Pays de la Loire</option>
+                        <option name="bassenormandie">Basse Normandie</option>                                                                        
+                      </select>
+                </div><!-- /.row -->           
+                <div class="row">
+                  <div class="col-lg-12" style="margin:10px">
+                      <input type="text" class="form-control" name="sujet" placeholder="Titre de votre annonce">
+                  </div>
+                </div><!-- /.row -->       
+                <div class="row">
+                  <div class="col-lg-12" style="margin:10px">
+                      <textarea class="form-control test" rows="15" id="form_comments" name="form[comments]" placeholder="Merci de saisir le texte de votre annonce" required="true"></textarea>
+                  </div>
+                </div><!-- /.row -->    
+                <div class="row">
+                  <div class="col-lg-12" style="margin:10px">
+                      <button type="submit" class="btn btn-primary">Valider</button> 
+                  </div>
+                </div><!-- /.row -->      
+              </fieldset>
+          </form>   
+          <div style="text-align: center; color: red;">{{tagline}}</div>     
+      </div>
+    </div>
+</div>

@@ -5,8 +5,16 @@
       </div>
       <div class="col-lg-10">
     <form class="bs-example form-horizontal form-sign" method="post" accept-charset="UTF-8">
-        <h2 class="form-signin-heading">Merci de vous authentifier</h2> 
+        <h2 class="form-signup-heading">Merci de créer votre compte</h2> 
         <fieldset style="width:300px">
+          <div class="row input-group" style="margin:10px"> 
+              <span class="input-group-addon" style="width:150px;">Prénom</span> 
+              <input type="text" required class="form-control" ng-model="User.firstname">
+          </div>
+          <div class="row input-group" style="margin:10px"> 
+              <span class="input-group-addon" style="width:150px;">Nom</span> 
+              <input type="text" required class="form-control" ng-model="User.lastname">
+          </div>                    
           <div class="row input-group" style="margin:10px"> 
               <span class="input-group-addon" style="width:150px;">Email</span>              
               <input type="email" required class="form-control" ng-model="User.username">
@@ -23,10 +31,9 @@
           <br><br>
           <div class="row">
               <div style="text-align: center; color: red;">{{tagline}}</div>
-          </div>          
+          </div>               
         </fieldset>
-    </form>        
-
+    </form> 
       </div>
     </div>
 </div>

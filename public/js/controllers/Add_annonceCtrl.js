@@ -1,7 +1,7 @@
-angular.module('MainCtrl', []).controller('MainController', ['$scope', 'Global',  function($scope, Global) {
+angular.module('Add_annonceCtrl', []).controller('Add_annonceController', ['$scope', 'Global',  function($scope, Global) {
 
-	$scope.tagline = 'Main scope !';	
-    $scope.User = {};
+	$scope.tagline = 'Ajout d\'une annonce!';	
+
 	Global.getSessions().success(function(data, status) {
         if (data.connected){
             $scope.User.connected = true;
@@ -9,7 +9,9 @@ angular.module('MainCtrl', []).controller('MainController', ['$scope', 'Global',
         }    
         else{
             $scope.User.connected = false;
+            $scope.User = {};
         }
-    });    
+    });
+
 
 }]);

@@ -3,7 +3,7 @@
     <title>Bootstrap arena</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" media="screen">
     <!-- My style -->
     <link href="css/style.css" rel="stylesheet" media="screen">
@@ -16,10 +16,13 @@
     <!-- ANGULAR CUSTOM -->
     <script src="js/app.js"></script>
     <script src="js/appRoutes.js"></script>
+    <script src="js/services/global.js"></script>
     <script src="js/controllers/MainCtrl.js"></script>
     <script src="js/controllers/SignCtrl.js"></script> 
+    <script src="js/controllers/SignupCtrl.js"></script>     
     <script src="js/controllers/ContactCtrl.js"></script>     
     <script src="js/controllers/LogoutCtrl.js"></script>      
+    <script src="js/controllers/Add_annonceCtrl.js"></script>        
 </head>
 <body ng-app="sampleApp" ng-controller="MainController">
     <nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
@@ -60,7 +63,7 @@
                     </li>
                 </ul>                 
                 <ul class="nav navbar-nav navbar-right" ng-hide="User.connected">
-                    <li><a href="#"><span class="fa fa-user"></span>Sign up</a></li> 
+                    <li><a href="/signup"><span class="fa fa-user"></span>Sign up</a></li> 
                     <li><a href="/signin"><span class="fa fa-user"></span>Sign in</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" ng-show="User.connected">

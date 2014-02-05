@@ -1,9 +1,11 @@
-angular.module('LogoutCtrl', ['MainCtrl']).controller('LogoutController', function($scope, $http, $location) {
+angular.module('LogoutCtrl', []).controller('LogoutController', function($scope, $http, $location) {
 
 	$scope.tagline = 'Logout scope !';	
 
     $http.post('/logout', $scope.User).
         success(function(data) {        	
+            $scope.User.username = "";
+            $scope.User.lastname = "";
 			$scope.User.firstname = "";
 			$scope.User.password = "";
 		    $scope.User.connected = false;
