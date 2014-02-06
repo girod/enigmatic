@@ -6,6 +6,7 @@ var passport = require('passport');
 
 //Models
 require('./app/models/user.js');
+require('./app/models/annonce.js');
 
 //bootstrap passport config
 require('./config/passport')(passport);
@@ -25,7 +26,7 @@ app.configure(function() {
         app.use(express.bodyParser());                     // pull information from html in POST
         app.use(express.methodOverride());                 // simulate DELETE and PUT  
         app.use(express.cookieParser('keyboard cat'));
-        app.use(express.session({ cookie: { maxAge: 960000 }}));
+        app.use(express.session({ secret: '74pOjjAP', cookie: { maxAge: 960000 }}));
         app.use(flash());
         app.use(passport.initialize());
         app.use(passport.session());        

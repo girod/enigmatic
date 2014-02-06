@@ -6,7 +6,6 @@ angular.module('SignCtrl', []).controller('SignController', function($scope, $ht
         if ($scope.User.username && $scope.User.password){
             $http.post('/signin', $scope.User).
                 success(function(data) {
-                    console.log(data);
                     if (data.connected){
                         $scope.User.connected = true;
                         $scope.User.firstname = data.user.firstname;

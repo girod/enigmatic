@@ -6,6 +6,8 @@
 var mongoose = require('mongoose'),
     User = mongoose.model('users');
 
+var passport = require('passport');
+
 /**
  * Show login form
  */
@@ -26,13 +28,12 @@ exports.create = function(req, res){
     User.findOne({ username: newuser.username }, function(err, user) {
         if (err) { return done(err); }
         if (!user) {  //Le user n'existe pas
-            User.create({ username: newuser.username, password: newuser.password, firstname: newuser.firstname, lastname: newuser.lastname  }, function(err){
+            User.create({ username: newuser.username, password: newuser.password, firstname: newuser.firstname, lastname: newuser.lastname  }, function(err){   //Création du user
                 if (err) throw err;
-            });
-            req.logIn(newuser, function(err) {
-                if (err) throw err;
-                return res.send({ connected: true, user: newuser, message:"Bienvenu, vous êtes connecté" });        
-            });  
+                passport.authenticate('local')(req, res, function () {  //Authentification automatique et session passport
+                    return res.send({ connected: true, user: newuser, message:"Bienvenu, vous êtes connecté" });        
+                });
+            }); 
         }
         else{
             return res.send({ connected: false, message:"Cet utilisateur est déjà enregistré" });        

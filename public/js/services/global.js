@@ -4,7 +4,7 @@
 angular.module('sampleApp').factory('Global', function($http){
     return {
         getSessions: function() {
-            return $http.post('/isconnected');
+            return $http.get('/isconnected');
         }
     };
 });

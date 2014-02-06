@@ -17,6 +17,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'SignupController'
 		})
 
+		.when('/auth', {		
+			templateUrl: 'views/auth.html',
+			controller: 'AuthController'
+		})
+
 		.when('/logout', {		
 			templateUrl: 'views/home.html',
 			controller: 'LogoutController'

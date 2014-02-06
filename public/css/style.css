@@ -40,8 +40,12 @@ body{
           transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
  }
-  
-.test {
+
+.titre_annonce {
+  width: 800px !important;
+}
+
+.contenu_annonce {
   width: 800px !important;
   height: 150px !important;
 }
@@ -56,6 +60,22 @@ body{
 	line-height: 1.1;
 	font-size: 20px;
 }
+
+.border-radius1 {
+    background-color:#EDF2F3;
+    border: 1px solid #EBDCDC;
+    border-radius:10px;
+    padding: 15px;
+}
+
+.border-radius2 {
+    background-color:#F7F5E7;
+    border: 1px solid #EBDCDC;
+    border-radius:10px;
+    padding: 15px;
+}
+
+
 
 @media (max-width: 768px) {
 	.btn-sm {

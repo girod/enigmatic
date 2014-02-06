@@ -1,0 +1,67 @@
+<div class="container" style="margin-top:60px">
+    <div class="row">
+      <div class="col-lg-2" style="margin-top:50px">
+          <img src="images/cassette.png">
+      </div>
+      <div class="col-lg-10">
+        <form class="bs-example form-horizontal form-sign" method="post" accept-charset="UTF-8">
+          <div class="border-radius1">
+            <h2 class="form-signup-heading">Si vous n'avez pas encore de compte, merci de le créer</h2> 
+            <fieldset style="width:300px">
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Prénom</span> 
+                  <input type="text" required class="form-control" ng-model="User.firstname">
+              </div>
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Nom</span> 
+                  <input type="text" required class="form-control" ng-model="User.lastname">
+              </div>                    
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Email</span>              
+                  <input type="email" required class="form-control" ng-model="User.username">
+              </div>
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Password</span>  
+                  <input type="password" required class="form-control" ng-model="User.password">
+              </div>
+              <div class="row">
+                <div class="col-lg-12" style="margin:10px">
+                  <button type="submit" class="btn btn-primary" ng-click="register()">Valider</button> 
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                  <div style="text-align: center; color: red;">{{tagline}}</div>
+              </div>               
+            </fieldset>
+          </div>  
+        </form> 
+      </div>
+      <div class="col-lg-10" style="margin-top:20px">      
+        <form class="bs-example form-horizontal form-sign" method="post" accept-charset="UTF-8">
+          <div class="border-radius2">
+            <h2 class="form-signin-heading">Si vous possédez un compte, merci de vous authentifier</h2> 
+            <fieldset style="width:300px">
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Email</span>              
+                  <input type="email" required class="form-control" ng-model="User.username">
+              </div>
+              <div class="row input-group" style="margin:10px"> 
+                  <span class="input-group-addon" style="width:150px;">Password</span>  
+                  <input type="password" required class="form-control" ng-model="User.password">
+              </div>
+              <div class="row">
+                <div class="col-lg-12" style="margin:10px">
+                  <button type="submit" class="btn btn-primary" ng-click="register()">Valider</button> 
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                  <div style="text-align: center; color: red;">{{tagline}}</div>
+              </div>          
+            </fieldset>
+          </div>  
+        </form> 
+      </div>
+    </div>
+</div>

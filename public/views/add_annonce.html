@@ -9,24 +9,20 @@
               <fieldset style="width:300px">
                 <div class="row input-group" style="margin:10px"> 
                       <span class="input-group-addon" style="width:150px;">Prénom</span>
-                      <input type="text" class="form-control" name="firstname">
+                      <input type="text" required class="form-control" ng-model="User.firstname">
                 </div><!-- /.row -->
                 <div class="row input-group" style="margin:10px">
                       <span class="input-group-addon" style="width:150px;">Nom</span>
-                      <input type="text" class="form-control" name="lastname">
+                      <input type="text" required class="form-control" ng-model="User.lastname">
                 </div><!-- /.row -->
                 <div class="row input-group" style="margin:10px">
-                      <span class="input-group-addon" style="width:150px;">Email</span>
-                      <input type="text" class="form-control" name="username">
-                </div><!-- /.row -->  
-                <div class="row input-group" style="margin:10px">
                       <span class="input-group-addon" style="width:150px;">Téléphone</span>
-                      <input type="text" class="form-control" name="phone">
+                      <input type="text" class="form-control" ng-model="User.phone">
                 </div><!-- /.row -->         
                 <br><br>        
                 <div class="row input-group" style="margin:10px"> 
                       <span class="input-group-addon" style="width:150px;">Région</span>
-                      <select class="form-control" name="region">
+                      <select class="form-control" ng-model="Annonce.region">
                         <option name="aquitaine">Aquitaine</option>
                         <option name="midipyrennees">Midi-Pyrénées</option>
                         <option name="languedocroussillon">Languedoc Roussillon</option>
@@ -40,17 +36,17 @@
                 </div><!-- /.row -->           
                 <div class="row">
                   <div class="col-lg-12" style="margin:10px">
-                      <input type="text" class="form-control" name="sujet" placeholder="Titre de votre annonce">
+                      <input type="text" required class="form-control titre_annonce" ng-model="Annonce.sujet" placeholder="Titre de votre annonce">
                   </div>
                 </div><!-- /.row -->       
                 <div class="row">
                   <div class="col-lg-12" style="margin:10px">
-                      <textarea class="form-control test" rows="15" id="form_comments" name="form[comments]" placeholder="Merci de saisir le texte de votre annonce" required="true"></textarea>
+                      <textarea class="form-control contenu_annonce" rows="15" ng-model="Annonce.comments" placeholder="Merci de saisir le texte de votre annonce" required ></textarea>
                   </div>
                 </div><!-- /.row -->    
                 <div class="row">
                   <div class="col-lg-12" style="margin:10px">
-                      <button type="submit" class="btn btn-primary">Valider</button> 
+                      <button type="submit" class="btn btn-primary" ng-click="addannonce();">Valider</button> 
                   </div>
                 </div><!-- /.row -->      
               </fieldset>
