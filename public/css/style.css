@@ -42,11 +42,11 @@ body{
  }
 
 .titre_annonce {
-  width: 800px !important;
+  width: 480px !important;
 }
 
 .contenu_annonce {
-  width: 800px !important;
+  width: 480px !important;
   height: 150px !important;
 }
 
