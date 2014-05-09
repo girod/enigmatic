@@ -17,7 +17,7 @@ var port = 8080;
 // configuration ===============================================================
 
 var mongoUri = process.env.MONGOLAB_URI ||  'mongodb://localhost/enigmatic';
-mongoose.connect(mongoUri);         // connect to mongoDB database
+mongoose.connect(mongoUri);         //connect to mongoDB database
 
 
 app.configure(function() {
